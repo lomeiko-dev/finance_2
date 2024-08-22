@@ -1,8 +1,8 @@
 .container {
     width: 100%;
-    max-width: 1290px;
+    max-width: 1320px;
     margin: 0 auto;
-    /* padding: 0 10px; */
+    padding: 0 10px;
 }
 
 .button {
@@ -37,7 +37,7 @@
     background: linear-gradient(272.94deg, #34c200 0%, #02c8f5 100%);
 }
 
-.button_transparent{
+.button_transparent {
     background-color: transparent;
 }
 
@@ -215,6 +215,7 @@ main {
             .left_block {
                 width: 100%;
                 max-width: 740px;
+
                 h2 {
                     text-transform: uppercase;
                     font-size: 48px;
@@ -226,6 +227,7 @@ main {
 
                 form {
                     margin-top: 60px;
+
                     .title {
                         font-size: 24px;
                         font-weight: 700;
@@ -242,7 +244,7 @@ main {
                         color: #808080;
                     }
 
-                    .form_inner{
+                    .form_inner {
                         margin-top: 40px;
                         display: flex;
                         flex-direction: column;
@@ -273,11 +275,11 @@ main {
                         }
                     }
 
-                    .range{
-                        .box{
+                    .range {
+                        .box {
                             position: relative;
 
-                            input[type='range']{
+                            input[type='range'] {
                                 position: absolute;
                                 bottom: 0;
                                 left: 0;
@@ -291,9 +293,9 @@ main {
                                 background-image: linear-gradient(#3CE800, #3CE800);
                                 background-size: 100% 100%;
                                 background-repeat: no-repeat;
-                              }
-                              
-                              input[type="range"]::-webkit-slider-thumb {
+                            }
+
+                            input[type="range"]::-webkit-slider-thumb {
                                 -webkit-appearance: none;
                                 height: 20px;
                                 width: 20px;
@@ -302,14 +304,14 @@ main {
                                 cursor: ew-resize;
                                 box-shadow: 0 0 2px 0 #555;
                                 transition: background .3s ease-in-out;
-                              }
-                              
-                              input[type=range]::-webkit-slider-runnable-track  {
+                            }
+
+                            input[type=range]::-webkit-slider-runnable-track {
                                 -webkit-appearance: none;
                                 box-shadow: none;
                                 border: none;
                                 background: transparent;
-                              }
+                            }
                         }
                     }
                 }
@@ -382,12 +384,81 @@ main {
                 }
             }
         }
-        .triangles{
+
+        .triangles {
             margin-top: 80px;
             width: 100%;
             display: flex;
             justify-content: center;
         }
 
+    }
+
+    .advantages {
+        margin-top: 80px;
+        
+        .advantages_inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                text-transform: uppercase;
+                width: 100%;
+                max-width: 852px;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 60px;
+                letter-spacing: 0.02em;
+                text-align: center;
+                color: #3D3D3D;
+
+                b {
+                    color: #3CE800;
+                }
+            }
+
+            .list {
+                margin-top: 60px;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                li {
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        box-shadow: 0px 0px 100px 0px #0000001A;
+                        border: 2px solid #FFFFFF;
+                        border-radius: 2px;
+                        padding: 40px;
+                        width: 100%;
+                        max-width: 320px;
+
+                        .body {
+                            h3 {
+                                color: #3D3D3D;
+                                ;
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 18.75px;
+                                letter-spacing: 0.02em;
+                            }
+
+                            p {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 22px;
+                                letter-spacing: 0.02em;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
