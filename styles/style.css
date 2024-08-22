@@ -1,0 +1,204 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.button {
+    background-color: #3CE800;
+    border-radius: 0px 0px 5px 5px;
+    color: #fff;
+    padding: 17px 0;
+    width: 100%;
+    max-width: 208px;
+}
+
+.button:hover {
+    background-color: #30b201;
+}
+
+.button_gradient {
+    background: linear-gradient(272.94deg, #3CE800 0%, #00B1D8 100%);
+    box-shadow: 0px -1px 0px 0px #0000004D inset;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.75px;
+    letter-spacing: 0.02em;
+    padding: 25px 0;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+}
+.button_gradient:hover{
+    background: linear-gradient(272.94deg, #34c200 0%, #02c8f5 100%);
+}
+
+
+header {
+    z-index: 10;
+    position: relative;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+
+        .upper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                a:hover {
+                    color: #3CE800;
+                }
+            }
+
+            .call {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                max-width: 394px;
+
+                .phone {
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0.02em;
+                        word-break: none;
+                    }
+                }
+            }
+        }
+
+        .head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 30px;
+
+                a {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    position: relative;
+                }
+
+                a:before {
+                    position: absolute;
+                    z-index: 100;
+                    bottom: -20px;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #3CE800;
+                    opacity: 0;
+                    transition: .2s;
+                }
+
+                a:focus {
+                    color: #3CE800;
+                }
+
+                a:focus:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .intro {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('../assets/img/intro.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+
+        .toner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .body {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+
+            h1 {
+                width: 100%;
+                max-width: 849px;
+                color: #fff;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 70px;
+                letter-spacing: 0.02em;
+
+                b {
+                    color: #3CE800;
+                }
+            }
+
+            p {
+                margin-top: 40px;
+                width: 100%;
+                max-width: 828px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0.02em;
+            }
+
+            button{
+                margin-top: 10px;
+            }
+
+            .tap-tap{
+                position: absolute;
+                bottom: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: transparent;
+            }
+        }
+    }
+}
