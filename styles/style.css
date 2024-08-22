@@ -41,6 +41,12 @@
     background-color: transparent;
 }
 
+.triangles {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 header {
     z-index: 10;
@@ -385,18 +391,11 @@ main {
             }
         }
 
-        .triangles {
-            margin-top: 80px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
     }
 
     .advantages {
         margin-top: 80px;
-        
+
         .advantages_inner {
             display: flex;
             flex-direction: column;
@@ -437,6 +436,7 @@ main {
                         padding: 40px;
                         width: 100%;
                         max-width: 320px;
+                        height: 110px;
 
                         .body {
                             h3 {
