@@ -41,8 +41,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
-h1 {
-  font-size: 2em;
+h1,h2, p, form {
   margin: 0;
   padding: 0;
 }
@@ -193,8 +192,18 @@ textarea {
   margin: 0;
   /* 2 */
   border: none;
-  cursor: pointer;
   transition: .2s;
+}
+
+button{
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 /**
