@@ -48,6 +48,12 @@
     justify-content: center;
 }
 
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 header {
     z-index: 10;
     position: absolute;
@@ -420,9 +426,6 @@ main {
 
             .list {
                 margin-top: 60px;
-                list-style: none;
-                display: flex;
-                flex-wrap: wrap;
                 gap: 30px;
 
                 li {
@@ -484,7 +487,7 @@ main {
             display: flex;
             flex-direction: row;
 
-            .line{
+            .line {
                 margin: 0 60px;
             }
 
@@ -502,7 +505,7 @@ main {
                     justify-content: center;
                 }
 
-                h4{
+                h4 {
                     margin-top: 23px;
                 }
 
@@ -522,7 +525,7 @@ main {
                     }
                 }
 
-                .body{
+                .body {
                     margin-top: 23px;
                 }
 
@@ -542,5 +545,155 @@ main {
 
             }
         }
+    }
+
+    .consultation {
+        margin-top: 80px;
+        background-image: url('../assets/img/illustration.webp');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 622px;
+
+        .consultation_inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 622px;
+
+            h2 {
+                color: #fff;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 0.02em;
+            }
+
+            p {
+                margin-top: 10px;
+                width: 100%;
+                max-width: 451px;
+
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+            }
+
+            form {
+                margin-top: 40px;
+                width: 100%;
+                max-width: 630px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    background-color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.75px;
+                    letter-spacing: 0.02em;
+                    color: #3D3D3D;
+                    padding: 23px 30px;
+                    border-radius: 5px;
+                    border: 1px solid #E5E5E5;
+                    box-shadow: 1px 1px 5px 0px #00000033 inset;
+                }
+
+                .button_gradient {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .info {
+        margin-top: 80px;
+
+        .info_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                width: 100%;
+                max-width: 750px;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 60px;
+                letter-spacing: 0.02em;
+                color: #3D3D3D;
+                text-align: center;
+            }
+        }
+
+        .list {
+            margin-top: 80px;
+            gap: 60px 10px;
+
+            .item {
+                width: 100%;
+                max-width: 409px;
+                display: flex;
+                flex-direction: row;
+                gap: 31px;
+
+                .content {
+                    h4 {
+                        color: #FF003D;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        letter-spacing: 0.02em;
+                    }
+
+                    .line {
+                        width: 30px;
+                        height: 3px;
+                        background-color: #E5E5E5;
+                        margin: 20px 0;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0.02em;
+                        color: #808080;
+                    }
+                }
+            }
+
+            .item-last {
+                position: relative;
+                width: 409px;
+                flex-direction: column;
+
+                .positive-text {
+                    margin-left: auto;
+                    width: 100%;
+                    max-width: 300px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #3CE800;
+                }
+
+                .arrow{
+                    position: absolute;
+                    bottom: -230px;
+                    left: 30px;
+                }
+            }
+        }
+
+        .button_gradient{
+            margin-top: 60px;
+            max-width: 409px;
+        }
+
     }
 }
