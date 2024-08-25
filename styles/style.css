@@ -3,7 +3,6 @@
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 .button {
@@ -72,7 +71,6 @@
 
 .burger_menu {
     display: none;
-    box-sizing: border-box;
     border: 1px solid #FFFFFF;
     border-radius: 2px;
     width: 50px;
@@ -91,7 +89,7 @@
 }
 
 header {
-    z-index: 10;
+    z-index: 1000;
     position: absolute;
     width: 100%;
 
@@ -217,18 +215,20 @@ header {
                     flex-direction: row-reverse;
 
                     .button {
-                        width: 35px;
+                        width: 30px;
                         height: 30px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         border-radius: 50%;
+                        padding: 0;
 
                         p {
                             display: none;
                         }
 
                         .icon {
+                            margin-top: 4px;
                             display: block;
                         }
                     }
@@ -257,13 +257,17 @@ main {
         width: 100%;
         height: 100vh;
 
+        .container {
+            height: 100%;
+        }
+
         .toner {
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-color: rgba(0, 0, 0, .3);
         }
 
@@ -273,7 +277,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100vh;
+            height: 100%;
 
             h1 {
                 text-transform: uppercase;
@@ -315,6 +319,10 @@ main {
         }
 
         @media (max-width: 1024px) {
+            .toner {
+                height: 812px !important;
+            }
+
             .body {
                 h1 {
                     max-width: 700px;
@@ -353,6 +361,12 @@ main {
                     max-width: 100% !important;
                 }
             }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .intro {
+            height: 812px !important;
         }
     }
 
@@ -405,7 +419,6 @@ main {
                     }
 
                     .box {
-                        box-sizing: border-box;
                         margin-top: 10px;
                         width: 100%;
                         max-width: 630px;
@@ -654,7 +667,6 @@ main {
 
                 li {
                     .card {
-                        box-sizing: border-box;
                         display: flex;
                         flex-direction: row;
                         gap: 20px;
@@ -735,8 +747,21 @@ main {
                         width: 100%;
 
                         .card {
+                            flex-direction: column;
+                            align-items: center;
                             width: 100% !important;
                             max-width: 100% !important;
+                            height: 100% !important;
+
+                            .body {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                p {
+                                    text-align: center;
+                                }
+                            }
                         }
                     }
                 }
@@ -746,7 +771,7 @@ main {
         @media (max-width: 520px) {
             .advantages_inner {
                 h2 {
-                    font-size: 28px;
+                    font-size: 18px;
                     line-height: 36px;
                 }
             }
@@ -870,7 +895,7 @@ main {
 
                 .line {
                     transform: rotate(90deg);
-                    width: 5px;
+                    width: 5px !important;
                     height: 20px !important;
                     margin-top: 40px;
                     margin-bottom: 40px;
@@ -1087,11 +1112,17 @@ main {
         @media (max-width: 915px) {
             .list {
                 .item-last {
+                    width: fit-content !important;
+
                     .arrow {
                         bottom: -70px;
                         left: -50px;
                         transform: scale(-1, 1) scale(.5) rotate(-40deg);
                     }
+                }
+
+                .positive-text {
+                    font-size: 14px;
                 }
             }
         }
@@ -1108,8 +1139,8 @@ main {
                 }
             }
 
-            .list{
-                .item-last{
+            .list {
+                .item-last {
                     width: 100%;
                     margin-left: 40px;
 
@@ -1117,6 +1148,32 @@ main {
                         bottom: -70px;
                         left: -100px;
                         transform: scale(-1, 1) scale(.5) rotate(-40deg);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 450px) {
+            .info_inner {
+                h2 {
+                    font-size: 28px;
+                }
+            }
+
+            .list {
+                .item {
+                    flex-direction: column !important;
+                    align-items: center;
+
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        h4,
+                        p {
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -1247,17 +1304,20 @@ footer {
     }
 
     @media (max-width: 1240px) {
-        .footer_inner{
-            .footer_top{
+        .footer_inner {
+            .footer_top {
                 gap: 15px;
-                
-                h2{
+
+                h2 {
                     font-size: 16px;
                 }
-                .phone{
+
+                .phone {
                     font-size: 24px;
                 }
-                .address, .email{
+
+                .address,
+                .email {
                     font-weight: 500;
                     font-size: 13px !important;
                 }
@@ -1270,28 +1330,28 @@ footer {
     }
 
     @media (max-width: 1024px) {
-        .footer_inner{
-            .footer_top{
+        .footer_inner {
+            .footer_top {
                 gap: 40px;
                 flex-direction: column;
 
-                .section{
+                .section {
                     width: 100%;
                     max-width: 100% !important;
                 }
 
-                h1{
+                h1 {
                     margin: 0 auto;
                     width: fit-content;
                 }
 
-                .descr{
+                .descr {
                     max-width: 100% !important;
                 }
             }
 
-            .footer_bottom{
-                .footer_bottom_inner{
+            .footer_bottom {
+                .footer_bottom_inner {
                     flex-direction: column;
                     gap: 20px
                 }
