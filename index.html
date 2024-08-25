@@ -10,8 +10,18 @@
 </head>
 
 <body>
+    <div id="sidebar" class="sidebar">
+        <div class="container">
+            <nav id="app-nav-sidebar">
+                <a class="link-select" href="#">О компании</a>
+                <a href="#">Наши решения</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </div>
     <header>
         <div class="container">
+
             <div class="header">
                 <div class="upper">
                     <div class="links">
@@ -56,16 +66,16 @@
                         <img src="./assets/img/logo.webp" alt="logo site">
                     </h1>
 
-                    <nav>
-                        <a href="#">О компании</a>
+                    <nav id="app-nav">
+                        <a class="link-select" href="#">О компании</a>
                         <a href="#">Наши решения</a>
                         <a href="#">Контакты</a>
                     </nav>
-                    <div class="burger_menu">
+                    <button id="burger-button" class="burger_menu">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -80,8 +90,8 @@
                         Почему постоянно кассовые разрывы?
                         Где найти новые средства для инвестиций?
                         Что делать с налоговой нагрузкой?</p>
-                    <button class="button_gradient">Получить решение</button>
-                    <button class="tap-tap">
+                    <button id="get-solution" class="button_gradient">Получить решение</button>
+                    <button id="next" class="tap-tap">
                         <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.3329 14.5558C21.5338 14.3549 21.6342 14.1038 21.6342 13.8025C21.6342 13.5011 21.5338 13.25 21.3329 13.0491L19.8094 11.5257C19.6085 11.3248 19.3574 11.2243 19.0561 11.2243C18.7547 11.2243 18.5036 11.3248 18.3027 11.5257L15.1387 14.6898V6.28573C15.1387 5.99555 15.0326 5.74444 14.8206 5.53238C14.6085 5.32033 14.3574 5.2143 14.0672 5.2143H11.9244C11.6342 5.2143 11.3831 5.32033 11.171 5.53238C10.959 5.74444 10.853 5.99555 10.853 6.28573V14.6898L7.6889 11.5257C7.47684 11.3136 7.22573 11.2076 6.93555 11.2076C6.64537 11.2076 6.39425 11.3136 6.1822 11.5257L4.65876 13.0491C4.45787 13.25 4.35742 13.5011 4.35742 13.8025C4.35742 14.1038 4.45787 14.3549 4.65876 14.5558L10.719 20.6161L12.2425 22.1395C12.4434 22.3404 12.6945 22.4409 12.9958 22.4409C13.2972 22.4409 13.5483 22.3404 13.7492 22.1395L15.2726 20.6161L21.3329 14.5558ZM24.1286 7.34042C25.2782 9.30471 25.853 11.4531 25.853 13.7857C25.853 16.1183 25.2782 18.2723 24.1286 20.2478C22.9791 22.2121 21.4166 23.769 19.4411 24.9185C17.4768 26.0681 15.3284 26.6429 12.9958 26.6429C10.6632 26.6429 8.50921 26.0681 6.53376 24.9185C4.56948 23.769 3.01256 22.2121 1.863 20.2478C0.713449 18.2723 0.138672 16.1183 0.138672 13.7857C0.138672 11.4531 0.713449 9.30471 1.863 7.34042C3.01256 5.36497 4.56948 3.80247 6.53376 2.65292C8.50921 1.50337 10.6632 0.928589 12.9958 0.928589C15.3284 0.928589 17.4768 1.50337 19.4411 2.65292C21.4166 3.80247 22.9791 5.36497 24.1286 7.34042Z"
@@ -93,7 +103,7 @@
         </section>
         <section class="credit">
             <div class="container">
-                <div class="credit_inner">
+                <div id="credit" class="credit_inner">
                     <div class="left_block">
                         <h2>Я хочу получить кредит</h2>
                         <form action="#">
@@ -475,7 +485,7 @@
         </section>
         <section class="consultation">
             <div class="container">
-                <div class="consultation_inner">
+                <div id="consultation" class="consultation_inner">
                     <h2>бесплатная консультация</h2>
                     <p>Укажите ваши данные. Наш специалист свяжется с вами в течении 30 минут</p>
 
@@ -490,7 +500,7 @@
         </section>
         <section class="info">
             <div class="container">
-                <div class="info_inner">
+                <div id="decisions" class="info_inner">
                     <h2>умеем решать сложности, при обращении в Банки</h2>
                     <div class="body">
                         <ul class="list">
@@ -728,7 +738,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer_inner">
+        <div id="footer" class="footer_inner">
             <div class="container">
                 <div class="footer_top">
                     <div class="section">
@@ -808,5 +818,7 @@
     </footer>
 
 </body>
+
+<script src="./script/script.js"></script>
 
 </html>

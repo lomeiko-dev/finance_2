@@ -21,6 +21,17 @@ html {
   /* 2 */
 }
 
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3CE800;
+  border-radius: 10px;
+}
+
 /* Sections
      ========================================================================== */
 
