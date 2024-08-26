@@ -39,6 +39,7 @@
 
 .button_transparent {
     background-color: transparent;
+    /* transition: .2s; */
 }
 
 .button-gray {
@@ -141,7 +142,7 @@ nav {
 
 .sidebar {
     padding-top: 80px;
-    position: absolute;
+    position: fixed;
     z-index: 140;
     top: -500px;
     width: 100%;
@@ -433,7 +434,9 @@ main {
     }
 
     .credit {
+        opacity: 1;
         margin-top: 100px;
+        transition: .2s;
 
         .credit_inner {
             display: flex;
@@ -471,6 +474,67 @@ main {
                         line-height: 16.41px;
                         letter-spacing: 0.02em;
                         color: #808080;
+                    }
+
+                    .dropdown{
+                        width: 100%;
+                        max-width: 630px;
+                        position: relative;
+
+                        .overflow{
+                            display: none;
+                            position: absolute;
+                            z-index: 120;
+                            bottom: -150px;
+                            left: 0;
+                            width: 100%;
+                            height: 150px;
+
+                            .overflow_inner{
+                                position: relative;
+                                height: 100%;
+                                width: 100%;
+                                overflow: hidden;
+                                box-shadow: 0px 0px 100px 0px #0000001A;
+
+                                .panel{
+                                    transition: .2s;
+                                    width: 100%;
+                                    position: absolute;
+                                    top: -150px;
+                                    left: 0;
+                                    background-color: #fff;
+    
+                                    padding: 20px 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 150px;
+                                    overflow-x: auto;
+    
+    
+                                    p{
+                                        padding: 20px 10px;
+                                        border-bottom: 1px solid #e3e3e3;
+                                        transition: .2s;
+                                        cursor: pointer;
+                                        color: #858585;
+                                    }
+                                    p:hover{
+                                        background-color: #f4f4f4;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .overflow-open{
+
+                            .overflow_inner{
+                                .panel{
+                                    top: 0;
+                                }
+                            }
+                        }
                     }
 
                     .form_inner {
@@ -532,7 +596,6 @@ main {
                                 background: #3CE800;
                                 cursor: ew-resize;
                                 box-shadow: 0 0 2px 0 #555;
-                                transition: background .3s ease-in-out;
                             }
 
                             input[type=range]::-webkit-slider-runnable-track {
@@ -551,6 +614,7 @@ main {
                     box-shadow: 0px 0px 100px 0px #0000001A;
                     width: 520px;
                     padding: 1px 0;
+                    transition: .2s;
 
                     .content {
                         margin: 50px;
@@ -1038,6 +1102,13 @@ main {
                     border-radius: 5px;
                     border: 1px solid #E5E5E5;
                     box-shadow: 1px 1px 5px 0px #00000033 inset;
+                }
+
+                .input-error{
+                    border: 1px solid red;
+                }
+                .input-error::-webkit-input-placeholder{
+                    color: red;
                 }
 
                 .button_gradient {

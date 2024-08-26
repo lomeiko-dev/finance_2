@@ -101,51 +101,55 @@
                 </div>
             </div>
         </section>
-        <section class="credit">
+        <section id="credit-section" class="credit">
             <div class="container">
                 <div id="credit" class="credit_inner">
-                    <div class="left_block">
+                    <div id="left-block-credit" class="left_block">
                         <h2>Я хочу получить кредит</h2>
                         <form action="#">
                             <p class="title">Заполните форму</p>
                             <div class="form_inner">
                                 <div class="dropdown">
-                                    <p class="label">Вид кредита*</p>
-                                    <div class="box">
-                                        <input type="text">
-                                        <button class="button_transparent">
-                                            <svg width="14" height="6" viewBox="0 0 14 6" fill="none"
+                                    <p id="label-dropdown" class="label">Вид кредита*</p>
+                                    <div id="box-dropdown" class="box">
+                                        <input id="input-dropdown" readonly type="text">
+                                        <button id="toggle-dropdown" class="button_transparent">
+                                            <svg style="transition: .2s;" id="icon-arrow" width="14" height="6" viewBox="0 0 14 6" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7 6L0.937823 0.749999L13.0622 0.75L7 6Z" fill="#36C903" />
                                             </svg>
                                         </button>
                                     </div>
-                                    <!-- <div class="panel">
-                                        <p>Кредит бизнесу</p>
-                                        <p>Ипотека</p>
-                                        <p>Автокредит</p>
-                                        <p>Рефинансирование</p>
-                                    </div> -->
+                                    <div id="dropdown-overflow" class="overflow">
+                                        <div class="overflow_inner">
+                                            <div id="dropdown-panel" class="panel">
+                                                <p>Кредит бизнесу</p>
+                                                <p>Ипотека</p>
+                                                <p>Автокредит</p>
+                                                <p>Рефинансирование</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="range">
                                     <p class="label">Сумма кредита</p>
                                     <div class="box">
-                                        <input type="text">
-                                        <input type="range">
+                                        <input placeholder="₽" type="number" id="input-sum-credit" type="text">
+                                        <input id="range-sum-credit" type="range">
                                     </div>
                                 </div>
                                 <div class="range">
                                     <p class="label">Срок кредита</p>
                                     <div class="box">
-                                        <input type="text">
-                                        <input type="range">
+                                        <input placeholder="года" id="input-term-credit" type="text">
+                                        <input id="range-term-credit" type="range">
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="right_block">
-                        <div class="block">
+                        <div id="right-block-credit" class="block">
                             <div class="content">
                                 <div class="head">
                                     <p>Банки партнёры</p>
@@ -159,7 +163,7 @@
                                     <img src="./assets/img/logo-openbank.webp" alt="logo open bank">
                                     <p>и другие...</p>
                                 </div>
-                                <button class="button_gradient">заполнить заявку</button>
+                                <button id="submit-credit" class="button_gradient">заполнить заявку</button>
                                 <div class="consent_processing">
                                     <p>Нажимая на кнопку, вы даете согласие на обработку</p>
                                     <a href="#">персональных данных</a>
@@ -490,10 +494,10 @@
                     <p>Укажите ваши данные. Наш специалист свяжется с вами в течении 30 минут</p>
 
                     <form action="#">
-                        <input placeholder="Имя*" type="text" name="" id="">
-                        <input placeholder="+7 (---) --- -- --" type="text">
-                        <input placeholder="Email" type="text">
-                        <button class="button_gradient">отправить</button>
+                        <input id="name-input"  placeholder="Имя*" type="text" name="" id="">
+                        <input id="phone-input" placeholder="+7 (---) --- -- --" type="text">
+                        <input id="email-input" placeholder="Email" type="text">
+                        <button id="submit-consultation" class="button_gradient">отправить</button>
                     </form>
                 </div>
             </div>
@@ -819,6 +823,6 @@
 
 </body>
 
+<script src="https://unpkg.com/imask"></script>
 <script src="./script/script.js"></script>
-
 </html>
